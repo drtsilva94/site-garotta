@@ -48,3 +48,18 @@ body {
     margin-top: 3rem;
   }
   
+  .botao-agendar {
+    display: inline-block;
+    background-color: #ff8ba7;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .botao-agendar:hover {
+    background-color: #f56281;
+  }
+  
