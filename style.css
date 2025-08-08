@@ -87,3 +87,31 @@ body {
     border-radius: 4px;
   }
   
+
+  .servicos-estetica {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .servicos-estetica ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .servicos-estetica li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .tabela-precos {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
