@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Pinturas - Charlotte Duarte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +15,7 @@
     </div>
   </header>
 
-  <nav>
+  <nav class="nav">
     <ul>
       <li><a href="index.html">Início</a></li>
       <li><a href="sobre.html">Sobre</a></li>
@@ -27,7 +28,7 @@
   </nav>
 
   <main>
-    <section>
+    <section class="galeria-intro">
       <h2>Obras autorais</h2>
       <p>
         Charlotte transforma sentimentos e experiências em arte visual. Suas pinturas exploram temas como natureza, emoções, cotidiano e espiritualidade.
@@ -37,16 +38,63 @@
       </p>
     </section>
 
-    <section>
+    <!-- Galeria -->
+    <section class="galeria-pinturas">
       <h2>Galeria</h2>
-      <p>Em breve você poderá ver aqui algumas de suas pinturas favoritas.</p>
-      <!-- Aqui você poderá colocar imagens depois -->
+      <p>Algumas obras recentes da Charlotte.</p>
+
+      <div class="grid-galeria">
+        <figure>
+          <a href="imagens/pinturas (1).jpg" target="_blank" rel="noopener">
+            <img src="imagens/pinturas (1).jpg" alt="Pessoa caminhando em alameda de outono, óleo sobre tela">
+          </a>
+          <figcaption>Alameda no outono — óleo sobre tela</figcaption>
+        </figure>
+
+        <figure>
+          <a href="imagens/pinturas (2).jpg" target="_blank" rel="noopener">
+            <img src="imagens/pinturas (2).jpg" alt="Retrato de cachorro deitado, óleo sobre tela">
+          </a>
+          <figcaption>Retrato pet — óleo sobre tela</figcaption>
+        </figure>
+
+        <figure>
+          <a href="imagens/pinturas (3).jpg" target="_blank" rel="noopener">
+            <img src="imagens/pinturas (3).jpg" alt="Araras coloridas lado a lado, óleo sobre tela">
+          </a>
+          <figcaption>Araras — óleo sobre tela</figcaption>
+        </figure>
+
+        <figure>
+          <a href="imagens/pinturas (4).jpg" target="_blank" rel="noopener">
+            <img src="imagens/pinturas (4).jpg" alt="Natureza morta com tomates, óleo sobre tela">
+          </a>
+          <figcaption>Natureza morta — óleo sobre tela</figcaption>
+        </figure>
+
+        <figure>
+          <a href="imagens/pinturas (5).jpg" target="_blank" rel="noopener">
+            <img src="imagens/pinturas (5).jpg" alt="Vaca estilizada sobre fundo azul, óleo sobre tela">
+          </a>
+          <figcaption>Vaca pop — óleo sobre tela</figcaption>
+        </figure>
+
+        <figure>
+          <a href="imagens/pinturas.jpg" target="_blank" rel="noopener">
+            <img src="imagens/pinturas.jpg" alt="Margaridas e pilha de xícaras, óleo sobre tela">
+          </a>
+          <figcaption>Flores & xícaras — óleo sobre tela</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Garotta. Todos os direitos reservados.</p>
+    <p>&copy; <span id="year"></span> Garotta. Todos os direitos reservados.</p>
   </footer>
 
+  <!-- Se já tiver script.js pode manter; o importante é carregar js/main.js para o ano e link ativo -->
+  <!-- <script src="script.js"></script> -->
+  <script src="js/main.js"></script>
 </body>
 </html>
