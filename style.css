@@ -282,3 +282,152 @@ footer p {
   font-size: 0.9rem;
   color: #555;
 }
+
+.o-que-faco {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.o-que-faco h2 { margin: 0 0 1rem; }
+
+.oq-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+@media (max-width: 900px) { .oq-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .oq-grid { grid-template-columns: 1fr; } }
+
+.oq-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .25rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  background: #fff7fa;           /* rosa bem clarinho */
+  border: 1px solid #ffd3e3;     /* borda suave */
+  border-radius: 16px;
+  padding: 1rem;
+  transition: transform .1s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+}
+.oq-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  border-color: #e5a2c3;
+  background: #fff0f7;
+}
+
+.oq-card .icon {
+  display: inline-grid;
+  place-items: center;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  background: #ffe1ee;
+  margin-bottom: .25rem;
+}
+
+.oq-card h3 { margin: .25rem 0 .25rem; font-size: 1.1rem; }
+.oq-card p  { margin: 0; opacity: .85; font-size: .95rem; }
+
+
+.antes-depois {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.antes-depois h2 {
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+.ab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+@media (max-width: 900px) { .ab-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .ab-grid { grid-template-columns: 1fr; } }
+
+.ab-item {
+  background: #ffffff;
+  border: 1px solid #ffd3e3;      /* rosa suave do tema */
+  border-radius: 14px;
+  padding: 1rem;
+}
+.ab-item figcaption {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.ab-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .6rem;
+}
+
+.ab-img {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;            /* mantém proporção bonitinha */
+  background: #fff0f7;            /* fallback suave caso a imagem demore */
+}
+.ab-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ab-badge {
+  position: absolute;
+  top: .5rem; left: .5rem;
+  background: rgba(255,255,255,.9);
+  color: #333;
+  font-weight: 600;
+  font-size: .85rem;
+  padding: .2rem .55rem;
+  border-radius: .5rem;
+  border: 1px solid #ffd3e3;
+}
+.ab-badge--after { left: auto; right: .5rem; }
+
+
+/* Chamada para "Conheça minha história" */
+.cta-historia {
+  background: linear-gradient(180deg, #fff0f7 0%, #ffe6ee 100%);
+  padding: 2rem 1rem;
+  margin: 2rem 0 0;
+}
+.cta-historia__wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.cta-historia h2 {
+  margin: 0 0 .5rem;
+}
+.cta-historia p {
+  margin: 0 0 1rem;
+  opacity: .9;
+}
+
+
+
+/* Foto no hero da Home */
+.hero-foto {
+  display: block;
+  width: clamp(120px, 18vw, 180px);
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #fff;              /* aro branco */
+  outline: 3px solid #f3a9c6;          /* aro rosa do tema */
+  outline-offset: 3px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  margin: .5rem auto 1rem;             /* centraliza e dá respiro */
+}
