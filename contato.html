@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Contato - Charlotte Duarte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,11 +11,11 @@
   <header class="hero">
     <div class="overlay">
       <h1>Contato</h1>
-      <p>Fale com Charlotte Duarte</p>
+      <p>Fale com a Charlotte pelos canais oficiais</p>
     </div>
   </header>
 
-  <nav>
+  <nav class="nav">
     <ul>
       <li><a href="index.html">Início</a></li>
       <li><a href="sobre.html">Sobre</a></li>
@@ -27,21 +28,54 @@
   </nav>
 
   <main>
-    <section>
+    <section class="contato">
       <h2>Entre em contato</h2>
-      <p>Ficou interessada(o) em algum serviço ou produto da Charlotte? Fale com ela pelos canais abaixo:</p>
+      <p>Escolha a forma que preferir. Para agendamentos rápidos, use o WhatsApp 💬</p>
 
-      <ul>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/seunumerocomddd" target="_blank">Clique aqui para conversar</a></li>
-        <li><strong>Email:</strong> <a href="mailto:charlotte@email.com">charlotte@email.com</a></li>
-        <li><strong>Instagram:</strong> <a href="https://instagram.com/charlotte" target="_blank">@charlotte</a></li>
-      </ul>
+      <div class="contato-grid">
+        <!-- WhatsApp -->
+        <article class="contato-card">
+          <h3>WhatsApp</h3>
+          <p>Agende um horário ou tire suas dúvidas diretamente.</p>
+          <a class="btn" href="https://wa.me/56950036355" target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
+          <small class="muted">+56 9 5003 6355</small>
+        </article>
+
+        <!-- Instagram -->
+        <article class="contato-card">
+          <h3>Instagram</h3>
+          <p>Acompanhe novidades, valores e resultados no dia a dia.</p>
+          <a class="btn" href="https://www.instagram.com/garotta_estetica/" target="_blank" rel="noopener">
+            @garotta_estetica
+          </a>
+          <small class="muted">Mensagens pelo Direct</small>
+        </article>
+
+        <!-- E-mail -->
+        <article class="contato-card">
+          <h3>E‑mail</h3>
+          <p>Para orçamentos detalhados ou assuntos comerciais.</p>
+          <a class="btn" href="mailto:charlotteduarte@hotmail.com?subject=Contato — Site Garotta">
+            Enviar e‑mail
+          </a>
+          <small class="muted">charlotteduarte@hotmail.com</small>
+        </article>
+      </div>
+
+      <div class="contato-cta">
+        <a class="btn btn-primary" href="https://wa.me/56950036355" target="_blank" rel="noopener">
+          ✨ Agendar agora pelo WhatsApp
+        </a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Garotta. Todos os direitos reservados.</p>
+    <p>&copy; <span id="year"></span> Garotta. Todos os direitos reservados.</p>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>
