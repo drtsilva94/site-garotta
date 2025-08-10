@@ -213,3 +213,24 @@ body {
 
 .muted { color: #a2a6ac; display: block; margin-top: .5rem; }
 
+
+.como-chegar {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.como-chegar h2 {
+  margin-bottom: .5rem;
+}
+
+.como-chegar p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.mapa iframe {
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
