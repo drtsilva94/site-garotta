@@ -234,3 +234,51 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
+
+
+
+.sobre {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.sobre-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.foto-sobre {
+  flex: 1 1 250px;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.texto-sobre {
+  flex: 2 1 400px;
+}
+
+.texto-sobre h2 {
+  margin-bottom: 1rem;
+}
+
+.texto-sobre p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+
+.footer-mapa {
+  max-width: 400px;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+footer p {
+  font-size: 0.9rem;
+  color: #555;
+}
