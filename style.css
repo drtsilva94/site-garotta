@@ -431,3 +431,59 @@ footer p {
   box-shadow: 0 8px 24px rgba(0,0,0,.12);
   margin: .5rem auto 1rem;             /* centraliza e dá respiro */
 }
+
+
+
+/* ===== Ícones de redes (apenas visual) ===== */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  justify-content: center;   
+  align-items: center;
+  padding: 8px 0;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: #ff8ba7;                                 /* ícone branco */
+  border: 1px solid rgba(255,255,255,.55);     /* aro delicado */
+  background: rgba(255,255,255,.10);           /* leve vidro */
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.15);
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease;
+}
+
+.footer-social i {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.18);
+  border-color: rgba(255,255,255,.75);
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  outline: none;
+}
+
+.footer-social a:active {
+  transform: translateY(-1px);
+}
+
+/* Responsivo: ícones um pouco menores no mobile */
+@media (max-width: 480px) {
+  .footer-social a { width: 34px; height: 34px; }
+  .footer-social i { font-size: 16px; }
+}
+
+/* (Opcional) cor de destaque por marca no hover — remova se quiser tudo branco */
+.footer-social a:hover .fa-instagram { color: #E4405F; }
+.footer-social a:hover .fa-facebook-f { color: #1877F2; }
+.footer-social a:hover .fa-whatsapp   { color: #25D366; }
+.footer-social a:hover .fa-youtube    { color: #FF0000; }

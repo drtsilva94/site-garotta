@@ -27,10 +27,7 @@
   </nav>
 
   <main>
-    <section>
-      <h2>Sobre</h2>
-      <p>Minha irmã é uma artista completa. Atua na estética com carinho, costura peças incríveis, pinta com alma e escreve livros cheios de sensibilidade.</p>
-    </section>
+ 
 
      <!-- FOTO DA CHARLOTTE -->
     <img class="hero-foto" src="imagens/Charlotte.duarte.jpg" alt="Charlotte Duarte">
@@ -79,7 +76,9 @@
   
 
 
-  <footer>
+<footer>
+  <div class="footer-container">
+    <!-- Mapa -->
     <div class="footer-mapa">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.507474729059!2d-71.12643682515303!3d-34.97009817463692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966543d2f5b1783b%3A0x4bfa5cf6b3d4c5a!2sValles%20de%20Romeral%202%2C%20Romeral%2C%20Maule%2C%20Chile!5e0!3m2!1spt-BR!2scl!4v1690000000000"
@@ -91,9 +90,26 @@
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
-  
-    <p>&copy; <span id="year"></span> Garotta. Todos os direitos reservados.</p>
-  </footer>
+
+    <!-- Redes sociais -->
+    <div class="footer-social">
+      <a href="https://www.instagram.com/garotta_estetica/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/16SnQVrWaC/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://wa.me/56950036355" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      
+    </div>
+  </div>
+
+  <p>&copy; <span id="year"></span> Garotta. Todos os direitos reservados.</p>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
   
 
 </body>
