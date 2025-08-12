@@ -507,3 +507,18 @@ footer p {
     text-align: center;
   }
 }
+
+
+/* ===========================
+   AGENDAMENTO — Centralizado
+=========================== */
+.agendamento {
+  text-align: center;
+  margin-top: 2rem;
+}
+.agendamento h2 {
+  margin-bottom: 0.5rem;
+}
+.agendamento p {
+  margin-bottom: 1rem;
+}
