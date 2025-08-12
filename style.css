@@ -1,148 +1,165 @@
+/* ===========================
+   ESTILOS GERAIS / BASE
+=========================== */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff6f6;
-    color: #333;
-  }
-  
-  .hero {
-    background-color: #f9c5d1;
-    padding: 4rem 2rem;
-    text-align: center;
-    color: white;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    background-color: #ffb6b6;
-    margin: 0;
-    padding: 1rem;
-  }
-  
-  nav ul li {
-    margin: 0 1rem;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  main {
-    padding: 2rem;
-  }
-  
-  footer {
-    background-color: #f8d7da;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
-  }
-  
-  .botao-agendar {
-    display: inline-block;
-    background-color: #ff8ba7;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 1rem;
-  }
-  
-  .botao-agendar:hover {
-    background-color: #f56281;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff6f6;
+  color: #333;
+}
 
-  .livro {
-    border: 1px solid #ddd;
-    padding: 16px;
-    margin-bottom: 24px;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .livro img {
-    width: 200px;
-    height: auto;
-    border-radius: 4px;
-  }
-  
-  .botao-compra {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 8px 16px;
-    background-color: green;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
+/* ===========================
+   HERO (Cabeçalho visual)
+=========================== */
+.hero {
+  background-color: #f9c5d1;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
 
-  .servicos-estetica {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-  .servicos-estetica ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .servicos-estetica li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .tabela-precos {
-    margin-top: 2rem;
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .conteudo-servico {
-    display: none;
-    margin-top: 1rem;
-    background-color: #fff0f0;
-    padding: 1rem;
-    border-radius: 8px;
-  }
-  
-  .toggle-servico {
-    background: none;
-    border: none;
-    color: #d72638;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  
-  .conteudo-servico img {
-    max-width: 200px;
-    margin: 0.5rem;
-    border-radius: 4px;
-  }
-  
+/* ===========================
+   NAVEGAÇÃO
+=========================== */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: #ffb6b6;
+  margin: 0;
+  padding: 1rem;
+}
+nav ul li {
+  margin: 0 1rem;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  .galeria-pinturas, .galeria-intro { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+/* ===========================
+   CONTEÚDO PRINCIPAL E RODAPÉ
+=========================== */
+main {
+  padding: 2rem;
+}
+footer {
+  background-color: #f8d7da;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+footer p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ===========================
+   BOTÕES GERAIS
+=========================== */
+.botao-agendar {
+  display: inline-block;
+  background-color: #ff8ba7;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.botao-agendar:hover {
+  background-color: #f56281;
+}
+.botao-compra {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: green;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* ===========================
+   PÁGINA DE LIVROS
+=========================== */
+.livro {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  text-align: center;
+}
+.livro img {
+  width: 200px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* ===========================
+   SERVIÇOS DE ESTÉTICA
+=========================== */
+.servicos-estetica {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.servicos-estetica ul {
+  list-style: none;
+  padding-left: 0;
+}
+.servicos-estetica li {
+  margin-bottom: 0.5rem;
+}
+.tabela-precos {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.conteudo-servico {
+  display: none;
+  margin-top: 1rem;
+  background-color: #fff0f0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.toggle-servico {
+  background: none;
+  border: none;
+  color: #d72638;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.conteudo-servico img {
+  max-width: 200px;
+  margin: 0.5rem;
+  border-radius: 4px;
+}
+
+/* ===========================
+   GALERIA DE PINTURAS
+=========================== */
+.galeria-pinturas,
+.galeria-intro {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 .galeria-pinturas h2 { margin: 0 0 .5rem; }
 .galeria-pinturas p { margin: 0 0 1rem; opacity: .85; }
-
 .grid-galeria {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -150,10 +167,9 @@ body {
 }
 @media (max-width: 900px) { .grid-galeria { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .grid-galeria { grid-template-columns: 1fr; } }
-
 .grid-galeria figure {
   margin: 0;
-  background: #17181a; /* combina com tema escuro */
+  background: #17181a;
   border: 1px solid #222;
   border-radius: 12px;
   overflow: hidden;
@@ -171,11 +187,12 @@ body {
 }
 .grid-galeria a:hover img { filter: brightness(1.05); }
 
-
+/* ===========================
+   CONTATO
+=========================== */
 .contato { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
 .contato h2 { margin: 0 0 .5rem; }
 .contato p { margin: 0 0 1rem; opacity: .9; }
-
 .contato-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -184,18 +201,15 @@ body {
 }
 @media (max-width: 900px) { .contato-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) { .contato-grid { grid-template-columns: 1fr; } }
-
 .contato-card {
-  background: #ffe6ea; /* rosa bem claro */
-  border: 1px solid #ffb6c1; /* borda rosa */
+  background: #ffe6ea;
+  border: 1px solid #ffb6c1;
   border-radius: 14px;
   padding: 1rem;
-  color: #333; /* texto mais escuro para contraste */
+  color: #333;
 }
-
 .contato-card h3 { margin: 0 0 .25rem; }
 .contato-card p { margin: 0 0 .75rem; opacity: .9; }
-
 .btn {
   display: inline-block;
   padding: .6rem 1rem;
@@ -208,69 +222,57 @@ body {
 }
 .btn:hover { filter: brightness(1.05); transform: translateY(-1px); }
 .btn-primary { background: #e5a2c3; color: #141416; border-color: #e5a2c3; font-weight: 600; }
-
 .contato-cta { text-align: center; margin-top: 1.5rem; }
-
 .muted { color: #a2a6ac; display: block; margin-top: .5rem; }
 
-
+/* ===========================
+   SEÇÃO COMO CHEGAR
+=========================== */
 .como-chegar {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
   text-align: center;
 }
-
-.como-chegar h2 {
-  margin-bottom: .5rem;
-}
-
-.como-chegar p {
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
+.como-chegar h2 { margin-bottom: .5rem; }
+.como-chegar p { margin-bottom: 1rem; line-height: 1.5; }
 .mapa iframe {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
-
-
+/* ===========================
+   SOBRE
+=========================== */
 .sobre {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
-
 .sobre-conteudo {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
 }
-
 .foto-sobre {
   flex: 1 1 250px;
   max-width: 300px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
 .texto-sobre {
   flex: 2 1 400px;
 }
-
-.texto-sobre h2 {
-  margin-bottom: 1rem;
-}
-
+.texto-sobre h2 { margin-bottom: 1rem; }
 .texto-sobre p {
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
-
+/* ===========================
+   MAPA NO RODAPÉ
+=========================== */
 .footer-mapa {
   max-width: 400px;
   margin: 0 auto 1rem;
@@ -278,11 +280,10 @@ body {
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
-footer p {
-  font-size: 0.9rem;
-  color: #555;
-}
 
+/* ===========================
+   O QUE FAÇO
+=========================== */
 .o-que-faco {
   max-width: 1100px;
   margin: 2rem auto;
@@ -290,7 +291,6 @@ footer p {
   text-align: center;
 }
 .o-que-faco h2 { margin: 0 0 1rem; }
-
 .oq-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -298,7 +298,6 @@ footer p {
 }
 @media (max-width: 900px) { .oq-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .oq-grid { grid-template-columns: 1fr; } }
-
 .oq-card {
   display: flex;
   flex-direction: column;
@@ -307,8 +306,8 @@ footer p {
   text-align: center;
   text-decoration: none;
   color: inherit;
-  background: #fff7fa;           /* rosa bem clarinho */
-  border: 1px solid #ffd3e3;     /* borda suave */
+  background: #fff7fa;
+  border: 1px solid #ffd3e3;
   border-radius: 16px;
   padding: 1rem;
   transition: transform .1s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
@@ -319,7 +318,6 @@ footer p {
   border-color: #e5a2c3;
   background: #fff0f7;
 }
-
 .oq-card .icon {
   display: inline-grid;
   place-items: center;
@@ -329,11 +327,12 @@ footer p {
   background: #ffe1ee;
   margin-bottom: .25rem;
 }
-
 .oq-card h3 { margin: .25rem 0 .25rem; font-size: 1.1rem; }
-.oq-card p  { margin: 0; opacity: .85; font-size: .95rem; }
+.oq-card p { margin: 0; opacity: .85; font-size: .95rem; }
 
-
+/* ===========================
+   ANTES & DEPOIS
+=========================== */
 .antes-depois {
   max-width: 1100px;
   margin: 2rem auto;
@@ -343,7 +342,6 @@ footer p {
   text-align: center;
   margin: 0 0 1rem;
 }
-
 .ab-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -351,10 +349,9 @@ footer p {
 }
 @media (max-width: 900px) { .ab-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) { .ab-grid { grid-template-columns: 1fr; } }
-
 .ab-item {
   background: #ffffff;
-  border: 1px solid #ffd3e3;      /* rosa suave do tema */
+  border: 1px solid #ffd3e3;
   border-radius: 14px;
   padding: 1rem;
 }
@@ -363,19 +360,17 @@ footer p {
   font-weight: 600;
   margin-bottom: .5rem;
 }
-
 .ab-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: .6rem;
 }
-
 .ab-img {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  aspect-ratio: 4 / 3;            /* mantém proporção bonitinha */
-  background: #fff0f7;            /* fallback suave caso a imagem demore */
+  aspect-ratio: 4 / 3;
+  background: #fff0f7;
 }
 .ab-img img {
   width: 100%;
@@ -383,7 +378,6 @@ footer p {
   object-fit: cover;
   display: block;
 }
-
 .ab-badge {
   position: absolute;
   top: .5rem; left: .5rem;
@@ -397,8 +391,9 @@ footer p {
 }
 .ab-badge--after { left: auto; right: .5rem; }
 
-
-/* Chamada para "Conheça minha história" */
+/* ===========================
+   CTA — Conheça minha história
+=========================== */
 .cta-historia {
   background: linear-gradient(180deg, #fff0f7 0%, #ffe6ee 100%);
   padding: 2rem 1rem;
@@ -409,40 +404,34 @@ footer p {
   margin: 0 auto;
   text-align: center;
 }
-.cta-historia h2 {
-  margin: 0 0 .5rem;
-}
-.cta-historia p {
-  margin: 0 0 1rem;
-  opacity: .9;
-}
+.cta-historia h2 { margin: 0 0 .5rem; }
+.cta-historia p { margin: 0 0 1rem; opacity: .9; }
 
-
-
-/* Foto no hero da Home */
+/* ===========================
+   FOTO NO HERO DA HOME
+=========================== */
 .hero-foto {
   display: block;
   width: clamp(120px, 18vw, 180px);
   height: auto;
   border-radius: 50%;
-  border: 3px solid #fff;              /* aro branco */
-  outline: 3px solid #f3a9c6;          /* aro rosa do tema */
+  border: 3px solid #fff;
+  outline: 3px solid #f3a9c6;
   outline-offset: 3px;
   box-shadow: 0 8px 24px rgba(0,0,0,.12);
-  margin: .5rem auto 1rem;             /* centraliza e dá respiro */
+  margin: .5rem auto 1rem;
 }
 
-
-
-/* ===== Ícones de redes (apenas visual) ===== */
+/* ===========================
+   ÍCONES DE REDES SOCIAIS
+=========================== */
 .footer-social {
   display: flex;
   gap: 12px;
-  justify-content: center;   
+  justify-content: center;
   align-items: center;
   padding: 8px 0;
 }
-
 .footer-social a {
   width: 40px;
   height: 40px;
@@ -450,19 +439,14 @@ footer p {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  color: #ff8ba7;                                 /* ícone branco */
-  border: 1px solid rgba(255,255,255,.55);     /* aro delicado */
-  background: rgba(255,255,255,.10);           /* leve vidro */
+  color: #ff8ba7;
+  border: 1px solid rgba(255,255,255,.55);
+  background: rgba(255,255,255,.10);
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.15);
   transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease;
 }
-
-.footer-social i {
-  font-size: 18px;
-  line-height: 1;
-}
-
+.footer-social i { font-size: 18px; line-height: 1; }
 .footer-social a:hover,
 .footer-social a:focus-visible {
   transform: translateY(-2px);
@@ -471,19 +455,55 @@ footer p {
   box-shadow: 0 6px 18px rgba(0,0,0,.18);
   outline: none;
 }
-
 .footer-social a:active {
   transform: translateY(-1px);
 }
-
-/* Responsivo: ícones um pouco menores no mobile */
 @media (max-width: 480px) {
   .footer-social a { width: 34px; height: 34px; }
   .footer-social i { font-size: 16px; }
 }
-
-/* (Opcional) cor de destaque por marca no hover — remova se quiser tudo branco */
+/* Hover color específico por marca */
 .footer-social a:hover .fa-instagram { color: #E4405F; }
 .footer-social a:hover .fa-facebook-f { color: #1877F2; }
 .footer-social a:hover .fa-whatsapp   { color: #25D366; }
 .footer-social a:hover .fa-youtube    { color: #FF0000; }
+
+
+
+/* ===========================
+   PÁGINA DE LIVROS — Layout lado a lado
+=========================== */
+.livro {
+  display: flex;           /* lado a lado */
+  flex-wrap: wrap;         /* quebra no mobile */
+  gap: 1.5rem;
+  align-items: flex-start;
+  text-align: left;
+  background-color: #fff0f0;
+}
+
+.livro img {
+  width: 200px;
+  height: auto;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.livro-conteudo {
+  flex: 1;
+  min-width: 260px;
+}
+
+.livro-conteudo h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .livro {
+    flex-direction: column;
+    text-align: center;
+  }
+  .livro-conteudo {
+    text-align: center;
+  }
+}
