@@ -249,18 +249,39 @@ footer p {
   margin: 2rem auto;
   padding: 0 1rem;
 }
+
 .sobre-conteudo {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
 }
+
+/* Foto SEM distorcer e com tamanho controlado */
 .foto-sobre {
-  flex: 1 1 250px;
-  max-width: 300px;
+  flex: 0 0 auto;     /* não cresce junto com o texto */
+  width: 100%;        /* ocupa a largura do próprio bloco */
+  max-width: 300px;   /* limite de largura (ajuste se quiser) */
+  height: auto;       /* mantém a proporção original da foto */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: block;
+  object-fit: cover;
 }
+
+
+.foto-sobre {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 3 / 4;  /* retrato */
+  object-fit: cover;    /* corta excesso mantendo enquadramento bonito */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: block;
+}
+
+
 .texto-sobre {
   flex: 2 1 400px;
 }
@@ -269,6 +290,7 @@ footer p {
   line-height: 1.6;
   margin-bottom: 1rem;
 }
+
 
 /* ===========================
    MAPA NO RODAPÉ
@@ -522,3 +544,4 @@ footer p {
 .agendamento p {
   margin-bottom: 1rem;
 }
+

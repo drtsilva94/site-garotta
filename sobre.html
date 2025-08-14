@@ -2,8 +2,44 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sobre - Charlotte Duarte</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== Estilos mínimos pro carrossel simples (.slide) ===== */
+    .galeria-sobre { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+    .galeria-sobre h2 { text-align: center; margin-bottom: 1rem; }
+
+    .carousel-simples {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    }
+
+    /* Mantém proporção e evita “distorção” */
+    .carousel-viewport-simples { aspect-ratio: 16 / 9; width: 100%; }
+    .slide { display: none; width: 100%; height: 100%; }
+    .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      width: 2.5rem; height: 2.5rem; border-radius: 999px;
+      border: 0; background: rgba(0,0,0,.45); color: #fff;
+      font-size: 1.6rem; line-height: 1; cursor: pointer;
+      display: grid; place-items: center;
+    }
+    .carousel-btn:hover { background: rgba(0,0,0,.6); }
+    .carousel-btn.prev { left: .75rem; }
+    .carousel-btn.next { right: .75rem; }
+
+    /* Pontinhos */
+    .dots { position: absolute; left: 50%; transform: translateX(-50%); bottom: .75rem; display: flex; gap: .5rem; }
+    .dots button { width: 9px; height: 9px; border-radius: 999px; border: 0; background: rgba(255,255,255,.6); cursor: pointer; }
+    .dots button[aria-current="true"] { background: rgba(255,255,255,.95); box-shadow: 0 0 0 2px rgba(0,0,0,.15) inset; }
+  </style>
 </head>
 <body>
 
@@ -29,16 +65,41 @@
   <main>
     <section class="sobre">
       <div class="sobre-conteudo">
-        <img src="imagens/charlotte.jpg" alt="Charlotte Duarte" class="foto-sobre">
+        <img src="imagens/charlotte.jpg" alt="Charlotte Duarte" class="foto-sobre" width="800" height="600">
         <div class="texto-sobre">
           <h2>Quem é Charlotte?</h2>
-          <p>
-            Charlotte Duarte é uma artista apaixonada pela beleza em todas as suas formas. Seu trabalho é uma mistura delicada entre estética, arte manual e expressão literária.
-            Com carinho e sensibilidade, ela cuida da autoestima de mulheres através da estética, costura peças únicas que contam histórias, pinta com alma e transforma emoções em palavras por meio de seus livros.
-          </p>
-          <p>
-            Este site foi criado para reunir e apresentar seus diversos talentos, de forma organizada, bonita e acessível para todos que queiram conhecê-la melhor ou adquirir seus serviços e criações.
-          </p>
+          <p>Charlotte Duarte é uma artista apaixonada pela beleza em todas as suas formas...</p>
+          <p>Este site foi criado para reunir e apresentar seus diversos talentos...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrossel simples (usa .slide) -->
+    <section class="galeria-sobre">
+      <h2>Momentos da Charlotte</h2>
+
+      <div class="carousel-simples" aria-roledescription="carousel">
+        <button class="carousel-btn prev" aria-label="Imagem anterior">‹</button>
+
+        <div class="carousel-viewport-simples" tabindex="0">
+          <div class="slide">
+            <img src="imagens/lotty (3).jpg" alt="Charlotte dando aula de estética" width="1600" height="900" fetchpriority="high">
+          </div>
+          <div class="slide">
+            <img src="imagens/lotty (2).jpg" alt="Charlotte preparando materiais de estética" loading="lazy" width="1600" height="900">
+          </div>
+          <div class="slide">
+            <img src="imagens/charlotte/charlotte-03.jpg" alt="Charlotte com uma de suas pinturas" loading="lazy" width="1600" height="900">
+          </div>
+          <div class="slide">
+            <img src="imagens/charlotte/charlotte-04.jpg" alt="Charlotte autografando um livro" loading="lazy" width="1600" height="900">
+          </div>
+        </div>
+
+        <button class="carousel-btn next" aria-label="Próxima imagem">›</button>
+
+        <div class="dots" aria-label="Seleção de imagens">
+          <!-- os pontinhos serão preenchidos via JS -->
         </div>
       </div>
     </section>
@@ -48,5 +109,93 @@
     <p>&copy; 2025 Garotta. Todos os direitos reservados.</p>
   </footer>
 
+  <!-- JS INLINE: sua lógica antiga adaptada + prev/next + dots -->
+  <script>
+    (function() {
+      // abre/fecha seções (se você usava isso em outro lugar)
+      window.toggleConteudo = function(id) {
+        const el = document.getElementById(id);
+        el.style.display = el.style.display === 'block' ? 'none' : 'block';
+      };
+
+      let slideIndex = 0;
+      const slides = Array.from(document.querySelectorAll(".carousel-simples .slide"));
+      const prevBtn = document.querySelector(".carousel-simples .prev");
+      const nextBtn = document.querySelector(".carousel-simples .next");
+      const dotsWrap = document.querySelector(".carousel-simples .dots");
+      const viewport = document.querySelector(".carousel-viewport-simples");
+
+      if (!slides.length) return;
+
+      // cria dots
+      slides.forEach((_, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Ir para imagem ' + (i + 1));
+        b.addEventListener('click', () => { slideIndex = i; mostrarSlide(slideIndex, true); });
+        dotsWrap.appendChild(b);
+      });
+
+      function setDots() {
+        Array.from(dotsWrap.children).forEach((b, i) => {
+          if (i === slideIndex) b.setAttribute('aria-current', 'true');
+          else b.removeAttribute('aria-current');
+        });
+      }
+
+      function mostrarSlide(index, pauseAutoplay) {
+        if (index >= slides.length) slideIndex = 0;
+        if (index < 0) slideIndex = slides.length - 1;
+
+        slides.forEach((slide, i) => {
+          slide.style.display = (i === slideIndex) ? "block" : "none";
+        });
+        setDots();
+        if (pauseAutoplay) pararAutoplayTemporario();
+      }
+
+      function proximoSlide() { slideIndex++; mostrarSlide(slideIndex, true); }
+      function slideAnterior() { slideIndex--; mostrarSlide(slideIndex, true); }
+
+      // botões
+      if (nextBtn) nextBtn.addEventListener('click', proximoSlide);
+      if (prevBtn) prevBtn.addEventListener('click', slideAnterior);
+
+      // teclado
+      viewport.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') proximoSlide();
+        if (e.key === 'ArrowLeft') slideAnterior();
+      });
+
+      // autoplay a cada 5s (pausa ao interagir)
+      let timer = null;
+      function iniciarCarrossel() {
+        mostrarSlide(slideIndex);
+        timer = setInterval(() => { slideIndex++; mostrarSlide(slideIndex); }, 5000);
+      }
+      function pararAutoplay() { if (timer) clearInterval(timer); timer = null; }
+      function pararAutoplayTemporario() {
+        pararAutoplay();
+        timer = setInterval(() => { slideIndex++; mostrarSlide(slideIndex); }, 5000);
+      }
+
+      // pausa no hover
+      const root = document.querySelector('.carousel-simples');
+      root.addEventListener('mouseenter', pararAutoplay);
+      root.addEventListener('mouseleave', pararAutoplayTemporario);
+
+      // toque (swipe) simples
+      let startX = null;
+      viewport.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+      viewport.addEventListener('touchend', (e) => {
+        if (startX == null) return;
+        const dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) (dx < 0 ? proximoSlide() : slideAnterior());
+        startX = null;
+      });
+
+      iniciarCarrossel();
+    })();
+  </script>
 </body>
 </html>
