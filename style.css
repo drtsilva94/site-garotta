@@ -545,3 +545,29 @@ footer p {
   margin-bottom: 1rem;
 }
 
+
+/* ===== Galeria de fotos ===== */
+.galeria-estetica {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff6f6;
+}
+
+.galeria-estetica h2 {
+  margin-bottom: 1.5rem;
+  color: #c02543;
+}
+
+.fotos-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.fotos-galeria img {
+  width: 280px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
